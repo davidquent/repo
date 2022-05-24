@@ -54,13 +54,13 @@ def _selecthandler(selectstr: str):
         pass
     else:
         if selectstr == 'fabric_code':
-            fab = input("请输入面料编号 0:3RD  1:BOS  2:AGD  3:BUH  4:ALG  5:YV  6:AVO :> ")
+            fab = input("请输入面料编号  0:3RD  1:BOS  2:AGD  3:BUH  4:ALG  5:YV  6:AVO :> ")
             fablist = ['3RD LINING', 'BOS', 'AGD', 'BUH', 'ALG', 'YV', 'AVO']
             if fab.isdigit():
                 if int(fab) < len(fablist):
                     val = _processselect(fab, fablist)
                 else:
-                    print("输入错误")
+                    print("输入错误！")
                     return 'c'
             else:
                 val = fab.upper()
